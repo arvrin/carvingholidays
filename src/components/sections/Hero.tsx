@@ -1,0 +1,105 @@
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Button from '../ui/Button';
+
+const Hero = () => {
+  return (
+    <section className="relative h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2835&auto=format&fit=crop"
+          alt="Travel destination"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+      </div>
+
+      {/* Content */}
+      <div className="container-custom relative z-10 flex h-full items-center">
+        <div className="max-w-3xl text-white">
+          <motion.h1
+            className="font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Discover Unique Destinations &{' '}
+            <span className="text-accent-400">Authentic Experiences</span>
+          </motion.h1>
+
+          <motion.p
+            className="mt-6 text-lg text-neutral-200 md:text-xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Curated journeys to Europe, Australia, Japan and beyond. Tailor-made
+            itineraries with local experts for unforgettable adventures.
+          </motion.p>
+
+          <motion.div
+            className="mt-8 flex flex-col gap-4 sm:flex-row"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Button size="lg" variant="primary">
+              Explore Tours
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              Request Free Quote
+            </Button>
+          </motion.div>
+
+          {/* Quick Stats */}
+          <motion.div
+            className="mt-12 flex flex-wrap gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <div>
+              <div className="font-heading text-3xl font-bold">500+</div>
+              <div className="text-sm text-neutral-300">Happy Travelers</div>
+            </div>
+            <div>
+              <div className="font-heading text-3xl font-bold">25+</div>
+              <div className="text-sm text-neutral-300">Destinations</div>
+            </div>
+            <div>
+              <div className="font-heading text-3xl font-bold">4.8/5</div>
+              <div className="text-sm text-neutral-300">Average Rating</div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 1.5 }}
+      >
+        <svg
+          className="h-8 w-8 text-white"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </motion.div>
+    </section>
+  );
+};
+
+export default Hero;
