@@ -4,13 +4,13 @@ import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 
 const CTASection = () => {
   return (
-    <section className="bg-gradient-to-r from-primary-500 to-primary-600 py-16 lg:py-20">
+    <section className="bg-gradient-to-r from-primary-800 to-primary-900 py-16 lg:py-20">
       <div className="container-custom">
         <div className="mx-auto max-w-4xl text-center text-white">
           <h2 className="font-heading text-3xl font-bold md:text-4xl">
             Ready to Start Your Adventure?
           </h2>
-          <p className="mt-4 text-lg text-primary-50">
+          <p className="mt-4 text-lg text-neutral-200">
             Get a free, personalized itinerary tailored to your interests and budget. Our travel
             experts are ready to help you plan your dream vacation.
           </p>
@@ -27,7 +27,7 @@ const CTASection = () => {
               href="https://wa.me/911234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg border-2 border-white px-7 py-3.5 text-lg font-medium text-white transition-all hover:bg-white hover:text-primary-500"
+              className="inline-flex items-center justify-center rounded-lg border-2 border-secondary-400 px-7 py-3.5 text-lg font-medium text-secondary-400 transition-all hover:bg-secondary-400 hover:text-white"
             >
               <svg
                 className="mr-2 h-5 w-5"
@@ -40,17 +40,17 @@ const CTASection = () => {
             </a>
           </div>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 text-primary-50 sm:flex-row sm:gap-8">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 text-neutral-300 sm:flex-row sm:gap-8">
             <a
               href="tel:+911234567890"
-              className="flex items-center space-x-2 transition-colors hover:text-white"
+              className="flex items-center space-x-2 transition-colors hover:text-secondary-400"
             >
               <PhoneIcon className="h-5 w-5" />
               <span>+91 123 456 7890</span>
             </a>
             <a
               href="mailto:info@carvingholidays.com"
-              className="flex items-center space-x-2 transition-colors hover:text-white"
+              className="flex items-center space-x-2 transition-colors hover:text-secondary-400"
             >
               <EnvelopeIcon className="h-5 w-5" />
               <span>info@carvingholidays.com</span>

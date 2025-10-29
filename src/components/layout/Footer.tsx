@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   EnvelopeIcon,
   PhoneIcon,
@@ -66,18 +67,19 @@ const footerNavigation = {
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-900 text-neutral-300">
+    <footer className="bg-primary-900 text-neutral-300">
       <div className="container-custom py-12 lg:py-16">
         <div className="grid gap-8 lg:grid-cols-5">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500">
-                <span className="font-heading text-xl font-bold text-white">C</span>
-              </div>
-              <span className="font-heading text-xl font-bold text-white">
-                Carving Holidays
-              </span>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/logobranding.png"
+                alt="Carving Holidays"
+                width={180}
+                height={60}
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <p className="mt-4 text-sm text-neutral-400">
               Discover unique destinations and immersive travel experiences. Your journey to
@@ -88,14 +90,14 @@ const Footer = () => {
             <div className="mt-6 space-y-3">
               <a
                 href="tel:+911234567890"
-                className="flex items-center space-x-2 text-sm hover:text-primary-400"
+                className="flex items-center space-x-2 text-sm hover:text-secondary-400 transition-colors"
               >
                 <PhoneIcon className="h-5 w-5" />
                 <span>+91 123 456 7890</span>
               </a>
               <a
                 href="mailto:info@carvingholidays.com"
-                className="flex items-center space-x-2 text-sm hover:text-primary-400"
+                className="flex items-center space-x-2 text-sm hover:text-secondary-400 transition-colors"
               >
                 <EnvelopeIcon className="h-5 w-5" />
                 <span>info@carvingholidays.com</span>
@@ -114,7 +116,7 @@ const Footer = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-400 hover:text-primary-400"
+                  className="text-neutral-400 hover:text-secondary-400 transition-colors"
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -131,7 +133,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm hover:text-primary-400"
+                    className="text-sm hover:text-secondary-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -148,7 +150,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm hover:text-primary-400"
+                    className="text-sm hover:text-secondary-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -165,7 +167,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm hover:text-primary-400"
+                    className="text-sm hover:text-secondary-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -182,10 +184,10 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Carving Holidays. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="hover:text-primary-400">
+              <Link href="/privacy" className="hover:text-secondary-400 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-primary-400">
+              <Link href="/terms" className="hover:text-secondary-400 transition-colors">
                 Terms of Service
               </Link>
             </div>

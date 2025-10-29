@@ -1,0 +1,9 @@
+export { default as HeroWithTestimonials } from './HeroWithTestimonials';
+export { default as HeroWithCarousel } from './HeroWithCarousel';
+export { default as HeroWithFloatingTestimonials } from './HeroWithFloatingTestimonials';
+export { default as HeroWithStatsBar } from './HeroWithStatsBar';
+export { default as HeroSplitScreen } from './HeroSplitScreen';
+export { default as HeroSlideshow } from './HeroSlideshow';
+export { default as HeroKenBurns } from './HeroKenBurns';
+export { default as HeroDiagonalWipe } from './HeroDiagonalWipe';
+export { default as HeroParallaxPan } from './HeroParallaxPan';

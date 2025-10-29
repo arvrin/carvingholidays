@@ -30,7 +30,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             Discover Unique Destinations &{' '}
-            <span className="text-accent-400">Authentic Experiences</span>
+            <span className="text-secondary-400">Authentic Experiences</span>
           </motion.h1>
 
           <motion.p
@@ -49,10 +49,10 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Button size="lg" variant="primary">
+            <Button size="lg" variant="secondary">
               Explore Tours
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="border-secondary-400 text-white hover:bg-secondary-400/20 hover:border-secondary-300">
               Request Free Quote
             </Button>
           </motion.div>
@@ -65,15 +65,15 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <div>
-              <div className="font-heading text-3xl font-bold">500+</div>
+              <div className="font-heading text-3xl font-bold text-secondary-400">500+</div>
               <div className="text-sm text-neutral-300">Happy Travelers</div>
             </div>
             <div>
-              <div className="font-heading text-3xl font-bold">25+</div>
+              <div className="font-heading text-3xl font-bold text-secondary-400">25+</div>
               <div className="text-sm text-neutral-300">Destinations</div>
             </div>
             <div>
-              <div className="font-heading text-3xl font-bold">4.8/5</div>
+              <div className="font-heading text-3xl font-bold text-secondary-400">4.8/5</div>
               <div className="text-sm text-neutral-300">Average Rating</div>
             </div>
           </motion.div>

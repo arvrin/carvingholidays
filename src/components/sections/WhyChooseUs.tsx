@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-heading text-3xl font-bold text-neutral-900 md:text-4xl">
-            Why Choose <span className="text-primary-500">Carving Holidays</span>
+            Why Choose <span className="text-secondary-600">Carving Holidays</span>
           </h2>
           <p className="mt-4 text-lg text-neutral-600">
             We don't just plan trips, we craft unforgettable experiences tailored to you.
@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
               key={feature.name}
               className="group rounded-2xl bg-white p-6 shadow-soft transition-all duration-300 hover:shadow-medium"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-50 text-primary-500 transition-colors duration-300 group-hover:bg-primary-500 group-hover:text-white">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary-50 text-secondary-600 transition-colors duration-300 group-hover:bg-secondary-500 group-hover:text-white">
                 <feature.icon className="h-6 w-6" aria-hidden="true" />
               </div>
               <h3 className="mt-4 font-heading text-lg font-semibold text-neutral-900">
@@ -69,7 +69,7 @@ const WhyChooseUs = () => {
         <div className="mt-12 text-center">
           <p className="text-neutral-600">
             Ready to start your adventure?{' '}
-            <a href="/contact" className="font-medium text-primary-500 hover:text-primary-600">
+            <a href="/contact" className="font-medium text-secondary-600 hover:text-secondary-700 transition-colors">
               Get in touch →
             </a>
           </p>

@@ -1,8 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Card } from '../ui';
-import { ClockIcon, UsersIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import { PackageCard } from '../ui';
 
 // Sample featured tours data
 const featuredTours = [
@@ -76,85 +74,30 @@ const featuredTours = [
 
 const FeaturedTours = () => {
   return (
-    <section className="py-16 lg:py-24">
-      <div className="container-custom">
+    <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-neutral-50">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         {/* Section Header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-heading text-3xl font-bold text-neutral-900 md:text-4xl">
-            Featured <span className="text-primary-500">Tour Packages</span>
+        <div className="mx-auto max-w-3xl text-center mb-14">
+          <h2 className="font-heading text-4xl font-bold text-neutral-900 md:text-5xl lg:text-6xl">
+            Featured <span className="text-secondary-600">Tour Packages</span>
           </h2>
-          <p className="mt-4 text-lg text-neutral-600">
+          <p className="mt-6 text-xl text-neutral-600">
             Handpicked experiences designed to create lasting memories
           </p>
         </div>
 
-        {/* Tours Grid */}
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Tours Grid - Wider layout with 2 columns on medium, 3 on large, 4 on xl */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4">
           {featuredTours.map((tour) => (
-            <Card key={tour.id} className="group">
-              <Link href={`/tours/${tour.id}`}>
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={tour.image}
-                    alt={tour.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute top-4 right-4 rounded-full bg-accent-400 px-3 py-1 text-sm font-semibold text-white shadow-md">
-                    {tour.destination}
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="font-heading text-xl font-semibold text-neutral-900 transition-colors group-hover:text-primary-500">
-                    {tour.title}
-                  </h3>
-
-                  <div className="mt-4 space-y-2">
-                    <div className="flex items-center text-sm text-neutral-600">
-                      <ClockIcon className="mr-2 h-4 w-4" />
-                      {tour.duration}
-                    </div>
-                    <div className="flex items-center text-sm text-neutral-600">
-                      <UsersIcon className="mr-2 h-4 w-4" />
-                      {tour.groupSize}
-                    </div>
-                  </div>
-
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {tour.highlights.slice(0, 3).map((highlight) => (
-                      <span
-                        key={highlight}
-                        className="inline-flex items-center rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs font-medium text-neutral-700"
-                      >
-                        <MapPinIcon className="mr-1 h-3 w-3" />
-                        {highlight}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-6 flex items-center justify-between border-t border-neutral-200 pt-4">
-                    <div>
-                      <p className="text-sm text-neutral-500">Starting from</p>
-                      <p className="font-heading text-2xl font-bold text-primary-500">
-                        {tour.price}
-                      </p>
-                    </div>
-                    <span className="text-sm font-medium text-primary-500 group-hover:underline">
-                      View Details →
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </Card>
+            <PackageCard key={tour.id} {...tour} />
           ))}
         </div>
 
         {/* View All CTA */}
-        <div className="mt-12 text-center">
+        <div className="mt-16 text-center">
           <Link
             href="/tours"
-            className="inline-flex items-center rounded-lg border-2 border-primary-500 px-8 py-3 font-medium text-primary-500 transition-all hover:bg-primary-50"
+            className="inline-flex items-center rounded-xl bg-secondary-600 px-10 py-4 font-semibold text-white transition-all hover:bg-secondary-700 shadow-lg hover:shadow-xl"
           >
             View All Tours
             <svg

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Bars3Icon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import Button from '../ui/Button';
@@ -10,8 +11,9 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Destinations', href: '/destinations' },
   { name: 'Tours', href: '/tours' },
+  { name: 'Layouts', href: '/showcase' },
+  { name: 'Backgrounds', href: '/showcase-backgrounds' },
   { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -39,13 +41,15 @@ const Header = () => {
     >
       <nav className="container-custom flex items-center justify-between py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-500">
-            <span className="font-heading text-xl font-bold text-white">C</span>
-          </div>
-          <span className="font-heading text-xl font-bold text-neutral-900">
-            Carving <span className="text-primary-500">Holidays</span>
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logobranding.png"
+            alt="Carving Holidays"
+            width={180}
+            height={60}
+            className="h-12 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -54,7 +58,7 @@ const Header = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-neutral-700 transition-colors hover:text-primary-500"
+              className="text-sm font-medium text-neutral-700 transition-colors hover:text-secondary-600"
             >
               {item.name}
             </Link>
@@ -65,12 +69,12 @@ const Header = () => {
         <div className="hidden items-center space-x-4 lg:flex">
           <a
             href="tel:+911234567890"
-            className="flex items-center space-x-2 text-sm font-medium text-neutral-700 hover:text-primary-500"
+            className="flex items-center space-x-2 text-sm font-medium text-neutral-700 hover:text-secondary-600"
           >
             <PhoneIcon className="h-5 w-5" />
             <span>+91 123 456 7890</span>
           </a>
-          <Button size="sm" variant="primary">
+          <Button size="sm" variant="secondary">
             Get Quote
           </Button>
         </div>
@@ -113,7 +117,7 @@ const Header = () => {
                 <span>+91 123 456 7890</span>
               </a>
               <div className="px-4 pt-2">
-                <Button fullWidth variant="primary">
+                <Button fullWidth variant="secondary">
                   Get Quote
                 </Button>
               </div>

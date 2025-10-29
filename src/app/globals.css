@@ -1,39 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-primary-50: #E6F2FF;
-  --color-primary-100: #CCE5FF;
-  --color-primary-200: #99CCFF;
-  --color-primary-300: #66B2FF;
-  --color-primary-400: #3399FF;
-  --color-primary-500: #0066CC;
-  --color-primary-600: #0052A3;
-  --color-primary-700: #003D7A;
-  --color-primary-800: #002952;
-  --color-primary-900: #001429;
+  /* Colors - Based on Carving Holidays Logo Branding */
+  /* Primary: Navy Blue #141243 */
+  --color-primary-50: #E9E8ED;
+  --color-primary-100: #C7C4D6;
+  --color-primary-200: #A29DBD;
+  --color-primary-300: #7D75A4;
+  --color-primary-400: #605792;
+  --color-primary-500: #433A80;
+  --color-primary-600: #3D3478;
+  --color-primary-700: #342C6D;
+  --color-primary-800: #2C2563;
+  --color-primary-900: #141243;
 
-  --color-secondary-50: #FFE9E3;
-  --color-secondary-100: #FFD3C7;
-  --color-secondary-200: #FFA78F;
-  --color-secondary-300: #FF7B57;
-  --color-secondary-400: #FF6B35;
-  --color-secondary-500: #E65420;
-  --color-secondary-600: #B34219;
-  --color-secondary-700: #803012;
-  --color-secondary-800: #4D1E0B;
-  --color-secondary-900: #1A0D04;
+  /* Secondary: Gold #eebc55 */
+  --color-secondary-50: #FEF9ED;
+  --color-secondary-100: #FDF0D1;
+  --color-secondary-200: #FBE6B3;
+  --color-secondary-300: #F9DC95;
+  --color-secondary-400: #F8D47D;
+  --color-secondary-500: #F7CC65;
+  --color-secondary-600: #F6C75D;
+  --color-secondary-700: #F4C053;
+  --color-secondary-800: #F2BA49;
+  --color-secondary-900: #EEBC55;
 
-  --color-accent-50: #FEF7E6;
-  --color-accent-100: #FDEFCC;
-  --color-accent-200: #FBDF99;
-  --color-accent-300: #F9CF66;
-  --color-accent-400: #F7B733;
-  --color-accent-500: #DE9E1A;
-  --color-accent-600: #AB7A14;
-  --color-accent-700: #78560E;
-  --color-accent-800: #453308;
-  --color-accent-900: #121002;
+  /* Accent: Lighter Gold for highlights */
+  --color-accent-50: #FFFCF5;
+  --color-accent-100: #FFF8E6;
+  --color-accent-200: #FFF3D4;
+  --color-accent-300: #FFEEC2;
+  --color-accent-400: #FFEAB4;
+  --color-accent-500: #FFE6A6;
+  --color-accent-600: #FFE39E;
+  --color-accent-700: #FFDF95;
+  --color-accent-800: #FFDB8B;
+  --color-accent-900: #FFD57B;
 
   --color-neutral-50: #F7FAFC;
   --color-neutral-100: #EDF2F7;
@@ -100,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.5);
+  box-shadow: 0 0 0 3px rgba(238, 188, 85, 0.3);
 }
 
 .btn:disabled {
@@ -167,8 +170,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .input:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.5);
-  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(238, 188, 85, 0.3);
+  border-color: var(--color-secondary-900);
 }
 
 /* Custom Scrollbar */
