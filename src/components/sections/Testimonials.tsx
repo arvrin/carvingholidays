@@ -43,20 +43,20 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-gradient-to-br from-primary-50 to-white py-16 lg:py-24">
+    <section className="bg-gradient-to-br from-primary-50 to-white py-fluid-2xl">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-heading text-3xl font-bold text-neutral-900 md:text-4xl">
+        <div className="mx-auto max-w-[55ch] text-center">
+          <h2 className="font-heading text-fluid-3xl font-bold text-neutral-900">
             What Our <span className="text-primary-500">Travelers Say</span>
           </h2>
-          <p className="mt-4 text-lg text-neutral-600">
+          <p className="mt-[var(--space-sm)] text-fluid-lg text-neutral-600">
             Real experiences from real travelers who've explored the world with us
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* Testimonials Grid - Intrinsic auto-fit */}
+        <div className="mt-[var(--space-xl)] grid-auto-fit">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
@@ -64,28 +64,28 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="rounded-2xl bg-white p-6 shadow-soft transition-shadow duration-300 hover:shadow-medium"
+              className="rounded-2xl bg-white p-[var(--space-md)] shadow-soft transition-shadow duration-300 hover:shadow-medium"
             >
               {/* Rating */}
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center gap-[var(--space-3xs)]">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <StarIcon key={i} className="h-5 w-5 text-accent-400" />
                 ))}
               </div>
 
               {/* Comment */}
-              <p className="mt-4 text-neutral-700">{testimonial.comment}</p>
+              <p className="mt-[var(--space-sm)] text-fluid-base text-neutral-700">{testimonial.comment}</p>
 
               {/* Tour Badge */}
-              <div className="mt-4">
-                <span className="inline-flex items-center rounded-full bg-primary-50 px-3 py-1 text-xs font-medium text-primary-700">
+              <div className="mt-[var(--space-sm)]">
+                <span className="inline-flex items-center rounded-full bg-primary-50 px-[var(--space-sm)] py-[var(--space-3xs)] text-fluid-xs font-medium text-primary-700">
                   {testimonial.tour}
                 </span>
               </div>
 
               {/* Author */}
-              <div className="mt-6 flex items-center space-x-3 border-t border-neutral-200 pt-4">
-                <div className="relative h-12 w-12 overflow-hidden rounded-full">
+              <div className="mt-[var(--space-md)] flex items-center gap-[var(--space-sm)] border-t border-neutral-200 pt-[var(--space-sm)]">
+                <div className="relative h-12 w-12 overflow-hidden rounded-full aspect-square flex-shrink-0">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -94,8 +94,8 @@ const Testimonials = () => {
                   />
                 </div>
                 <div>
-                  <p className="font-semibold text-neutral-900">{testimonial.name}</p>
-                  <p className="text-sm text-neutral-500">{testimonial.location}</p>
+                  <p className="font-semibold text-fluid-base text-neutral-900">{testimonial.name}</p>
+                  <p className="text-fluid-sm text-neutral-500">{testimonial.location}</p>
                 </div>
               </div>
             </motion.div>
@@ -103,8 +103,8 @@ const Testimonials = () => {
         </div>
 
         {/* Trust Badge */}
-        <div className="mt-12 text-center">
-          <p className="text-neutral-600">
+        <div className="mt-[var(--space-xl)] text-center">
+          <p className="text-fluid-base text-neutral-600">
             Rated <span className="font-bold text-primary-500">4.8/5</span> on{' '}
             <a
               href="https://traveltriangle.com/agents/333730333738332d436172-Carving-Holidays"

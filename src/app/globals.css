@@ -13,6 +13,7 @@
   --color-primary-700: #342C6D;
   --color-primary-800: #2C2563;
   --color-primary-900: #141243;
+  --color-primary-950: #0d0c2d;
 
   /* Secondary: Gold #eebc55 */
   --color-secondary-50: #FEF9ED;
@@ -53,6 +54,36 @@
   --shadow-soft: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
   --shadow-medium: 0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.04);
   --shadow-hard: 0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 15px 50px -10px rgba(0, 0, 0, 0.1);
+
+  /* ========================================
+     INTRINSIC WEB DESIGN - Fluid Type Scale
+     Scales smoothly from 320px to 1920px viewport
+     ======================================== */
+  --fs-xs: clamp(0.6875rem, 0.625rem + 0.25vw, 0.875rem);      /* 11px - 14px */
+  --fs-sm: clamp(0.8125rem, 0.75rem + 0.25vw, 1rem);           /* 13px - 16px */
+  --fs-base: clamp(0.9375rem, 0.875rem + 0.25vw, 1.125rem);    /* 15px - 18px */
+  --fs-md: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);               /* 16px - 20px */
+  --fs-lg: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);              /* 18px - 24px */
+  --fs-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.75rem);            /* 20px - 28px */
+  --fs-2xl: clamp(1.5rem, 1.25rem + 1vw, 2.25rem);             /* 24px - 36px */
+  --fs-3xl: clamp(1.875rem, 1.5rem + 1.5vw, 3rem);             /* 30px - 48px */
+  --fs-4xl: clamp(2.25rem, 1.75rem + 2vw, 4rem);               /* 36px - 64px */
+  --fs-5xl: clamp(3rem, 2rem + 4vw, 6rem);                     /* 48px - 96px */
+
+  /* ========================================
+     INTRINSIC WEB DESIGN - Fluid Space Scale
+     Consistent rhythm that scales with viewport
+     ======================================== */
+  --space-3xs: clamp(0.25rem, 0.2rem + 0.2vw, 0.375rem);       /* 4px - 6px */
+  --space-2xs: clamp(0.375rem, 0.3rem + 0.3vw, 0.5rem);        /* 6px - 8px */
+  --space-xs: clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem);          /* 8px - 12px */
+  --space-sm: clamp(0.75rem, 0.6rem + 0.6vw, 1rem);            /* 12px - 16px */
+  --space-md: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);             /* 16px - 24px */
+  --space-lg: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);             /* 24px - 32px */
+  --space-xl: clamp(2rem, 1.5rem + 2vw, 3rem);                 /* 32px - 48px */
+  --space-2xl: clamp(3rem, 2rem + 4vw, 5rem);                  /* 48px - 80px */
+  --space-3xl: clamp(4rem, 3rem + 4vw, 6rem);                  /* 64px - 96px */
+  --space-4xl: clamp(6rem, 4rem + 6vw, 10rem);                 /* 96px - 160px */
 }
 
 /* Base Styles */
@@ -68,28 +99,119 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-neutral-900);
 }
 
-/* Custom Components */
+/* ========================================
+   INTRINSIC CONTAINER SYSTEM
+   Fluid containers that adapt to viewport
+   ======================================== */
 .container-custom {
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  --container-max: 90rem; /* 1440px - expandable */
+  --container-gutter: clamp(1rem, 0.5rem + 2vw, 3rem);
+  width: min(100% - var(--container-gutter) * 2, var(--container-max));
+  margin-inline: auto;
 }
 
-@media (min-width: 640px) {
-  .container-custom {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+/* Wide container for expansive sections */
+.container-wide {
+  --container-max: 100rem; /* 1600px */
+  --container-gutter: clamp(1rem, 0.5rem + 2vw, 3rem);
+  width: min(100% - var(--container-gutter) * 2, var(--container-max));
+  margin-inline: auto;
 }
 
-@media (min-width: 1024px) {
-  .container-custom {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+/* Full-width with consistent padding */
+.container-full {
+  padding-inline: clamp(1rem, 0.5rem + 2vw, 3rem);
 }
+
+/* ========================================
+   INTRINSIC GRID UTILITIES
+   Self-arranging grids using auto-fit/auto-fill
+   ======================================== */
+
+/* Auto-fit: Cards stretch to fill available space */
+.grid-auto-fit {
+  display: grid;
+  gap: var(--space-md, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
+
+/* Small cards (14rem min) */
+.grid-auto-fit-sm {
+  display: grid;
+  gap: var(--space-md, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+/* Large cards (22rem min) */
+.grid-auto-fit-lg {
+  display: grid;
+  gap: var(--space-lg, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+}
+
+/* Auto-fill: Consistent card sizes, may leave empty space */
+.grid-auto-fill {
+  display: grid;
+  gap: var(--space-md, 1.5rem);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+}
+
+/* ========================================
+   CONTAINER QUERIES
+   Component-level responsiveness
+   ======================================== */
+.container-query {
+  container-type: inline-size;
+}
+
+.card-container {
+  container-type: inline-size;
+  container-name: card;
+}
+
+/* ========================================
+   ASPECT RATIO UTILITIES
+   Consistent media proportions
+   ======================================== */
+.aspect-card { aspect-ratio: 4 / 3; }
+.aspect-hero { aspect-ratio: 16 / 9; }
+.aspect-portrait { aspect-ratio: 3 / 4; }
+.aspect-square { aspect-ratio: 1; }
+.aspect-wide { aspect-ratio: 21 / 9; }
+
+/* ========================================
+   FLUID SPACING UTILITIES
+   ======================================== */
+.py-fluid-sm { padding-block: var(--space-sm); }
+.py-fluid-md { padding-block: var(--space-md); }
+.py-fluid-lg { padding-block: var(--space-lg); }
+.py-fluid-xl { padding-block: var(--space-xl); }
+.py-fluid-2xl { padding-block: var(--space-2xl); }
+.py-fluid-3xl { padding-block: var(--space-3xl); }
+
+.px-fluid-sm { padding-inline: var(--space-sm); }
+.px-fluid-md { padding-inline: var(--space-md); }
+.px-fluid-lg { padding-inline: var(--space-lg); }
+
+.gap-fluid-xs { gap: var(--space-xs); }
+.gap-fluid-sm { gap: var(--space-sm); }
+.gap-fluid-md { gap: var(--space-md); }
+.gap-fluid-lg { gap: var(--space-lg); }
+.gap-fluid-xl { gap: var(--space-xl); }
+
+/* ========================================
+   FLUID TYPOGRAPHY UTILITIES
+   ======================================== */
+.text-fluid-xs { font-size: var(--fs-xs); }
+.text-fluid-sm { font-size: var(--fs-sm); }
+.text-fluid-base { font-size: var(--fs-base); }
+.text-fluid-md { font-size: var(--fs-md); }
+.text-fluid-lg { font-size: var(--fs-lg); }
+.text-fluid-xl { font-size: var(--fs-xl); }
+.text-fluid-2xl { font-size: var(--fs-2xl); }
+.text-fluid-3xl { font-size: var(--fs-3xl); }
+.text-fluid-4xl { font-size: var(--fs-4xl); }
+.text-fluid-5xl { font-size: var(--fs-5xl); }
 
 /* Button Base */
 .btn {

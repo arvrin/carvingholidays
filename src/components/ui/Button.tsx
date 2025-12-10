@@ -32,10 +32,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       ghost: 'text-neutral-700 hover:bg-neutral-100 focus:ring-neutral-500',
     };
 
+    // Fluid button sizes using CSS custom properties
     const sizes = {
-      sm: 'px-3 py-1.5 text-sm',
-      md: 'px-5 py-2.5 text-base',
-      lg: 'px-7 py-3.5 text-lg',
+      sm: 'px-[var(--space-sm)] py-[var(--space-2xs)] text-[length:var(--fs-sm)]',
+      md: 'px-[var(--space-md)] py-[var(--space-xs)] text-[length:var(--fs-base)]',
+      lg: 'px-[var(--space-lg)] py-[var(--space-sm)] text-[length:var(--fs-lg)]',
     };
 
     return (

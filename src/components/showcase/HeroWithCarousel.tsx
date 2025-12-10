@@ -182,7 +182,7 @@ const HeroWithCarousel = () => {
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
-                    onClick={() => setCurrentIndex(index)}
+                    onClick={() => setCurrentTestIndex(index)}
                     className={`h-2 rounded-full transition-all ${
                       index === currentTestIndex
                         ? 'w-8 bg-secondary-400'

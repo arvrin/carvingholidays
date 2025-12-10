@@ -37,7 +37,7 @@ const Header = () => {
           : 'bg-white/95 backdrop-blur-sm'
       )}
     >
-      <nav className="container-custom flex items-center justify-between py-4">
+      <nav className="container-custom flex items-center justify-between py-[var(--space-sm)]">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -51,12 +51,12 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center space-x-8 lg:flex">
+        <div className="hidden items-center gap-[var(--space-lg)] lg:flex">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-neutral-700 transition-colors hover:text-secondary-600"
+              className="text-fluid-sm font-medium text-neutral-700 transition-colors hover:text-secondary-600"
             >
               {item.name}
             </Link>
@@ -64,10 +64,10 @@ const Header = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="hidden items-center space-x-4 lg:flex">
+        <div className="hidden items-center gap-[var(--space-sm)] lg:flex">
           <a
             href="tel:+918745074800"
-            className="flex items-center space-x-2 text-sm font-medium text-neutral-700 hover:text-secondary-600"
+            className="flex items-center gap-[var(--space-xs)] text-fluid-sm font-medium text-neutral-700 hover:text-secondary-600"
           >
             <PhoneIcon className="h-5 w-5" />
             <span>+91 87450 74800</span>
@@ -95,26 +95,26 @@ const Header = () => {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="border-t border-neutral-200 bg-white lg:hidden">
-          <div className="container-custom space-y-1 py-4">
+          <div className="container-custom space-y-[var(--space-3xs)] py-[var(--space-sm)]">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block rounded-lg px-4 py-3 text-base font-medium text-neutral-700 hover:bg-neutral-100"
+                className="block rounded-lg px-[var(--space-sm)] py-[var(--space-sm)] text-fluid-base font-medium text-neutral-700 hover:bg-neutral-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <div className="border-t border-neutral-200 pt-4">
+            <div className="border-t border-neutral-200 pt-[var(--space-sm)]">
               <a
                 href="tel:+918745074800"
-                className="flex items-center space-x-2 rounded-lg px-4 py-3 text-base font-medium text-neutral-700 hover:bg-neutral-100"
+                className="flex items-center gap-[var(--space-xs)] rounded-lg px-[var(--space-sm)] py-[var(--space-sm)] text-fluid-base font-medium text-neutral-700 hover:bg-neutral-100"
               >
                 <PhoneIcon className="h-5 w-5" />
                 <span>+91 87450 74800</span>
               </a>
-              <div className="px-4 pt-2">
+              <div className="px-[var(--space-sm)] pt-[var(--space-xs)]">
                 <Button fullWidth variant="secondary">
                   Get Quote
                 </Button>

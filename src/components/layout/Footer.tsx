@@ -68,8 +68,9 @@ const footerNavigation = {
 const Footer = () => {
   return (
     <footer className="bg-primary-900 text-neutral-300">
-      <div className="container-custom py-12 lg:py-16">
-        <div className="grid gap-8 lg:grid-cols-5">
+      <div className="container-custom py-fluid-2xl">
+        {/* Main Grid - Intrinsic layout */}
+        <div className="grid gap-[var(--space-lg)] grid-auto-fit-sm lg:grid-cols-5">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">
@@ -81,35 +82,35 @@ const Footer = () => {
                 className="h-12 w-auto object-contain"
               />
             </Link>
-            <p className="mt-4 text-sm text-neutral-400">
+            <p className="mt-[var(--space-sm)] text-fluid-sm text-neutral-400">
               Discover unique destinations and immersive travel experiences. Your journey to
               extraordinary adventures starts here.
             </p>
 
             {/* Contact Info */}
-            <div className="mt-6 space-y-3">
+            <div className="mt-[var(--space-md)] space-y-[var(--space-xs)]">
               <a
                 href="tel:+918745074800"
-                className="flex items-center space-x-2 text-sm hover:text-secondary-400 transition-colors"
+                className="flex items-center gap-[var(--space-xs)] text-fluid-sm hover:text-secondary-400 transition-colors"
               >
                 <PhoneIcon className="h-5 w-5" />
                 <span>+91 87450 74800</span>
               </a>
               <a
                 href="mailto:info@carvingholidays.com"
-                className="flex items-center space-x-2 text-sm hover:text-secondary-400 transition-colors"
+                className="flex items-center gap-[var(--space-xs)] text-fluid-sm hover:text-secondary-400 transition-colors"
               >
                 <EnvelopeIcon className="h-5 w-5" />
                 <span>info@carvingholidays.com</span>
               </a>
-              <div className="flex items-start space-x-2 text-sm">
+              <div className="flex items-start gap-[var(--space-xs)] text-fluid-sm">
                 <MapPinIcon className="mt-0.5 h-5 w-5 flex-shrink-0" />
                 <span>Bhopal, Madhya Pradesh, India</span>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="mt-6 flex space-x-4">
+            <div className="mt-[var(--space-md)] flex gap-[var(--space-sm)]">
               {footerNavigation.social.map((item) => (
                 <a
                   key={item.name}
@@ -127,13 +128,13 @@ const Footer = () => {
 
           {/* Destinations */}
           <div>
-            <h3 className="font-heading text-sm font-semibold text-white">Destinations</h3>
-            <ul className="mt-4 space-y-2">
+            <h3 className="font-heading text-fluid-sm font-semibold text-white">Destinations</h3>
+            <ul className="mt-[var(--space-sm)] space-y-[var(--space-xs)]">
               {footerNavigation.destinations.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm hover:text-secondary-400 transition-colors"
+                    className="text-fluid-sm hover:text-secondary-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -144,13 +145,13 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="font-heading text-sm font-semibold text-white">Company</h3>
-            <ul className="mt-4 space-y-2">
+            <h3 className="font-heading text-fluid-sm font-semibold text-white">Company</h3>
+            <ul className="mt-[var(--space-sm)] space-y-[var(--space-xs)]">
               {footerNavigation.company.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm hover:text-secondary-400 transition-colors"
+                    className="text-fluid-sm hover:text-secondary-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -161,13 +162,13 @@ const Footer = () => {
 
           {/* Support */}
           <div>
-            <h3 className="font-heading text-sm font-semibold text-white">Support</h3>
-            <ul className="mt-4 space-y-2">
+            <h3 className="font-heading text-fluid-sm font-semibold text-white">Support</h3>
+            <ul className="mt-[var(--space-sm)] space-y-[var(--space-xs)]">
               {footerNavigation.support.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm hover:text-secondary-400 transition-colors"
+                    className="text-fluid-sm hover:text-secondary-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -178,12 +179,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 border-t border-neutral-800 pt-8">
-          <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-            <p className="text-sm text-neutral-400">
+        <div className="mt-[var(--space-xl)] border-t border-neutral-800 pt-[var(--space-lg)]">
+          <div className="flex flex-wrap items-center justify-between gap-[var(--space-sm)]">
+            <p className="text-fluid-sm text-neutral-400">
               &copy; {new Date().getFullYear()} Carving Holidays. All rights reserved.
             </p>
-            <div className="flex space-x-6 text-sm">
+            <div className="flex gap-[var(--space-md)] text-fluid-sm">
               <Link href="/privacy" className="hover:text-secondary-400 transition-colors">
                 Privacy Policy
               </Link>

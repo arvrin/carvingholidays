@@ -4,18 +4,18 @@ import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 
 const CTASection = () => {
   return (
-    <section className="bg-gradient-to-r from-primary-800 to-primary-900 py-16 lg:py-20">
+    <section className="bg-gradient-to-r from-primary-800 to-primary-900 py-fluid-2xl">
       <div className="container-custom">
-        <div className="mx-auto max-w-4xl text-center text-white">
-          <h2 className="font-heading text-3xl font-bold md:text-4xl">
+        <div className="mx-auto max-w-[65ch] text-center text-white">
+          <h2 className="font-heading text-fluid-3xl font-bold">
             Ready to Start Your Adventure?
           </h2>
-          <p className="mt-4 text-lg text-neutral-200">
+          <p className="mt-[var(--space-sm)] text-fluid-lg text-neutral-200">
             Get a free, personalized itinerary tailored to your interests and budget. Our travel
             experts are ready to help you plan your dream vacation.
           </p>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-[var(--space-lg)] flex flex-wrap items-center justify-center gap-[var(--space-sm)]">
             <Button
               size="lg"
               variant="secondary"
@@ -27,7 +27,7 @@ const CTASection = () => {
               href="https://wa.me/918745074800"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg border-2 border-secondary-400 px-7 py-3.5 text-lg font-medium text-secondary-400 transition-all hover:bg-secondary-400 hover:text-white"
+              className="inline-flex items-center justify-center rounded-lg border-2 border-secondary-400 px-[var(--space-lg)] py-[var(--space-sm)] text-fluid-lg font-medium text-secondary-400 transition-all hover:bg-secondary-400 hover:text-white"
             >
               <svg
                 className="mr-2 h-5 w-5"
@@ -40,20 +40,20 @@ const CTASection = () => {
             </a>
           </div>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 text-neutral-300 sm:flex-row sm:gap-8">
+          <div className="mt-[var(--space-lg)] flex flex-wrap items-center justify-center gap-[var(--space-sm)] text-neutral-300 sm:gap-[var(--space-lg)]">
             <a
               href="tel:+918745074800"
-              className="flex items-center space-x-2 transition-colors hover:text-secondary-400"
+              className="flex items-center gap-[var(--space-xs)] transition-colors hover:text-secondary-400"
             >
               <PhoneIcon className="h-5 w-5" />
-              <span>+91 87450 74800</span>
+              <span className="text-fluid-base">+91 87450 74800</span>
             </a>
             <a
               href="mailto:info@carvingholidays.com"
-              className="flex items-center space-x-2 transition-colors hover:text-secondary-400"
+              className="flex items-center gap-[var(--space-xs)] transition-colors hover:text-secondary-400"
             >
               <EnvelopeIcon className="h-5 w-5" />
-              <span>info@carvingholidays.com</span>
+              <span className="text-fluid-base">info@carvingholidays.com</span>
             </a>
           </div>
         </div>

@@ -7,7 +7,7 @@ import Button from '../ui/Button';
 
 const Hero = () => {
   return (
-    <section className="relative h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
+    <section className="relative min-h-[max(70vh,28rem)] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -21,10 +21,10 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 flex h-full items-center">
-        <div className="max-w-3xl text-white">
+      <div className="container-custom relative z-10 flex min-h-[inherit] items-center py-[var(--space-3xl)]">
+        <div className="max-w-[60ch] text-white">
           <motion.h1
-            className="font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl"
+            className="font-heading text-fluid-4xl font-bold leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -34,7 +34,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="mt-6 text-lg text-neutral-200 md:text-xl"
+            className="mt-[var(--space-md)] text-fluid-lg text-neutral-200"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -44,7 +44,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="mt-8 flex flex-col gap-4 sm:flex-row"
+            className="mt-[var(--space-lg)] flex flex-wrap gap-[var(--space-sm)]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -59,22 +59,22 @@ const Hero = () => {
 
           {/* Quick Stats */}
           <motion.div
-            className="mt-12 flex flex-wrap gap-8"
+            className="mt-[var(--space-xl)] flex flex-wrap gap-[var(--space-lg)]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <div>
-              <div className="font-heading text-3xl font-bold text-secondary-400">500+</div>
-              <div className="text-sm text-neutral-300">Happy Travelers</div>
+              <div className="font-heading text-fluid-2xl font-bold text-secondary-400">500+</div>
+              <div className="text-fluid-sm text-neutral-300">Happy Travelers</div>
             </div>
             <div>
-              <div className="font-heading text-3xl font-bold text-secondary-400">25+</div>
-              <div className="text-sm text-neutral-300">Destinations</div>
+              <div className="font-heading text-fluid-2xl font-bold text-secondary-400">25+</div>
+              <div className="text-fluid-sm text-neutral-300">Destinations</div>
             </div>
             <div>
-              <div className="font-heading text-3xl font-bold text-secondary-400">4.8/5</div>
-              <div className="text-sm text-neutral-300">Average Rating</div>
+              <div className="font-heading text-fluid-2xl font-bold text-secondary-400">4.8/5</div>
+              <div className="text-fluid-sm text-neutral-300">Average Rating</div>
             </div>
           </motion.div>
         </div>
@@ -82,7 +82,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
+        className="absolute bottom-[var(--space-lg)] left-1/2 z-10 -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5 }}
       >
