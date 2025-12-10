@@ -89,11 +89,11 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="mt-6 space-y-3">
               <a
-                href="tel:+911234567890"
+                href="tel:+918745074800"
                 className="flex items-center space-x-2 text-sm hover:text-secondary-400 transition-colors"
               >
                 <PhoneIcon className="h-5 w-5" />
-                <span>+91 123 456 7890</span>
+                <span>+91 87450 74800</span>
               </a>
               <a
                 href="mailto:info@carvingholidays.com"

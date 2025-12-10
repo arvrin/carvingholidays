@@ -9,10 +9,8 @@ import Button from '../ui/Button';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Destinations', href: '/destinations' },
   { name: 'Tours', href: '/tours' },
-  { name: 'Layouts', href: '/showcase' },
-  { name: 'Backgrounds', href: '/showcase-backgrounds' },
+  { name: 'Destinations', href: '/destinations' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -68,11 +66,11 @@ const Header = () => {
         {/* CTA Buttons */}
         <div className="hidden items-center space-x-4 lg:flex">
           <a
-            href="tel:+911234567890"
+            href="tel:+918745074800"
             className="flex items-center space-x-2 text-sm font-medium text-neutral-700 hover:text-secondary-600"
           >
             <PhoneIcon className="h-5 w-5" />
-            <span>+91 123 456 7890</span>
+            <span>+91 87450 74800</span>
           </a>
           <Button size="sm" variant="secondary">
             Get Quote
@@ -110,11 +108,11 @@ const Header = () => {
             ))}
             <div className="border-t border-neutral-200 pt-4">
               <a
-                href="tel:+911234567890"
+                href="tel:+918745074800"
                 className="flex items-center space-x-2 rounded-lg px-4 py-3 text-base font-medium text-neutral-700 hover:bg-neutral-100"
               >
                 <PhoneIcon className="h-5 w-5" />
-                <span>+91 123 456 7890</span>
+                <span>+91 87450 74800</span>
               </a>
               <div className="px-4 pt-2">
                 <Button fullWidth variant="secondary">

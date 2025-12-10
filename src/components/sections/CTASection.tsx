@@ -24,7 +24,7 @@ const CTASection = () => {
               Request Free Quote
             </Button>
             <a
-              href="https://wa.me/911234567890"
+              href="https://wa.me/918745074800"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-lg border-2 border-secondary-400 px-7 py-3.5 text-lg font-medium text-secondary-400 transition-all hover:bg-secondary-400 hover:text-white"
@@ -42,11 +42,11 @@ const CTASection = () => {
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 text-neutral-300 sm:flex-row sm:gap-8">
             <a
-              href="tel:+911234567890"
+              href="tel:+918745074800"
               className="flex items-center space-x-2 transition-colors hover:text-secondary-400"
             >
               <PhoneIcon className="h-5 w-5" />
-              <span>+91 123 456 7890</span>
+              <span>+91 87450 74800</span>
             </a>
             <a
               href="mailto:info@carvingholidays.com"

@@ -1,76 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { PackageCard } from '../ui';
+import { allPackages } from '@/data/tours';
 
-// Sample featured tours data
-const featuredTours = [
-  {
-    id: 1,
-    title: 'European Grand Tour',
-    destination: 'Europe',
-    image:
-      'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=2940&auto=format&fit=crop',
-    duration: '14 Days / 13 Nights',
-    groupSize: '10-15 People',
-    price: '₹2,45,000',
-    highlights: ['Paris', 'Rome', 'Switzerland', 'Amsterdam'],
-  },
-  {
-    id: 2,
-    title: 'Japan Cultural Experience',
-    destination: 'Japan',
-    image:
-      'https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=2940&auto=format&fit=crop',
-    duration: '10 Days / 9 Nights',
-    groupSize: '8-12 People',
-    price: '₹1,85,000',
-    highlights: ['Tokyo', 'Kyoto', 'Mount Fuji', 'Osaka'],
-  },
-  {
-    id: 3,
-    title: 'Australia & New Zealand Adventure',
-    destination: 'Australia',
-    image:
-      'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=2830&auto=format&fit=crop',
-    duration: '16 Days / 15 Nights',
-    groupSize: '12-18 People',
-    price: '₹3,25,000',
-    highlights: ['Sydney', 'Melbourne', 'Auckland', 'Queenstown'],
-  },
-  {
-    id: 4,
-    title: 'Southeast Asia Explorer',
-    destination: 'Southeast Asia',
-    image:
-      'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=2939&auto=format&fit=crop',
-    duration: '12 Days / 11 Nights',
-    groupSize: '10-15 People',
-    price: '₹95,000',
-    highlights: ['Thailand', 'Vietnam', 'Cambodia', 'Singapore'],
-  },
-  {
-    id: 5,
-    title: 'Swiss Alps & Lakes',
-    destination: 'Switzerland',
-    image:
-      'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=2940&auto=format&fit=crop',
-    duration: '8 Days / 7 Nights',
-    groupSize: '8-12 People',
-    price: '₹1,65,000',
-    highlights: ['Zurich', 'Interlaken', 'Lucerne', 'Zermatt'],
-  },
-  {
-    id: 6,
-    title: 'Bali Paradise Retreat',
-    destination: 'Indonesia',
-    image:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2838&auto=format&fit=crop',
-    duration: '7 Days / 6 Nights',
-    groupSize: '6-10 People',
-    price: '₹75,000',
-    highlights: ['Ubud', 'Seminyak', 'Nusa Dua', 'Uluwatu'],
-  },
-];
+// Select 6 featured tours from the data
+const featuredTours = allPackages.slice(0, 6);
 
 const FeaturedTours = () => {
   return (
